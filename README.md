@@ -14,5 +14,7 @@ Python code implementation for simulating Mapreduce process
 
                               
        DataNodeManager  Spill(partition,sort...)    
-                 ⬆         ⬆
-    split_i ——> Map ——> Cache ——> file_i ——> Mergefile ——Copy——> Memory ——> Merge ——> Reduce
+                 ⬆         ⬆                                     
+    split_0 ——> Map ——> Cache ——> file_i ——> Mergefile ——(Copy all split_buffer_files)——> Memory ——> Merge ——> Reduce
+                                                 ⬇
+                                        (merg on disk)
