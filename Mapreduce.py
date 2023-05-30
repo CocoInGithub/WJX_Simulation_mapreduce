@@ -109,13 +109,14 @@ intermediate_data.sort(key=lambda x: x[1])
 
 # Perform the Reduce operation
 final_result = reduce_func(intermediate_data)
+final_result = sorted(final_result.items(), key=lambda x: x[1], reverse=True)
 
 # Write the final result to a file
 with open('result.csv', 'w') as f:
     writer = csv.writer(f)
-    for key, value in final_result.items():
+    for key, value in final_result:
         writer.writerow([key, value])
 
 # Find and print the passenger with the most flights
-most_flights_passenger = max(final_result, key=final_result.get)
+most_flights_passenger, flights_count = final_result[0]
 print(f'The id of passenger with the most flights is: {most_flights_passenger}')
