@@ -1,7 +1,6 @@
 # WJX_Simulation_mapreduce
+# Mapreduce.py是过程的实现代码，result.csv是最终reduce输出的结果
 Python code implementation for simulating Mapreduce process
-
-# Mapreduce.py是过程的实现代码
 
 代码涉及如下目录:  
 1./HDFS目录：用于读取分页文件split.csv  
