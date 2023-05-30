@@ -2,8 +2,8 @@
 Python code implementation for simulating Mapreduce process
 
 代码涉及如下目录：
-1./HDFS目录：用于读取分页文件split.csv
-2./tmp/mapred/local目录：是模拟存放的过程中的缓存文件
+1./HDFS目录：用于读取分页文件split.csv\n
+2./tmp/mapred/local目录：是模拟存放的过程中的缓存文件\n
 
 代码实现的过程主要有以下：
 1.将一个目标文件分成4个split.csv存放于HDFS目录下用于读取
